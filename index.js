@@ -5,7 +5,10 @@ const app = express();
 const PORT = 8000;
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:5173');
+  res.header('Access-Control-Allow-Origin', [
+    'http://localhost:5173',
+    'https://testclient-eta.vercel.app/',
+  ]);
   next();
 });
 
